@@ -8,11 +8,18 @@ const TodoList = () => {
     const { data: todos } = UseFetch('http://localhost:5000/todos');
     const history = useHistory();
 
+     const handleClick = (e, id) => {
+        e.preventDefault();
+        handleDelete(id);
+    }
+
+
     const handleDelete = (id) => { 
+        window.location.reload()
         axios.delete(`http://localhost:5000/todos/${id}`)
             .then(res => {
                 alert('Todo Deleted Successfully');
-                history.push('/id');
+                history.push('/');
             })
             .catch(error => {
                 console.error('Error deleting todo:', error);
@@ -20,10 +27,6 @@ const TodoList = () => {
             });
     }
 
-    const handleClick = (e, id) => {
-        e.preventDefault();
-        handleDelete(id);
-    }
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
