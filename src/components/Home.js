@@ -4,7 +4,7 @@ import TodoForm from "./TodoForm";
 const Home = () => {
     return (
         <div className="home">
-            <h1>Hello these are your tasks today</h1>
+            <h1> What's Your Plan Today?? </h1>
             <div>
             <TodoForm/>
             <TodoList />

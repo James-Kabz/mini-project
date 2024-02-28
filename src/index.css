@@ -77,13 +77,16 @@
 .form button{
   padding: 10px;
   border-radius: 10px;
-  background-color: blue !important;
+  background-color: rgb(108, 10, 227) !important;
   color: white;
   margin-bottom: 20px;
   border: none;
   outline: none;
   cursor: pointer;
   width: 50px;
+}
+.form button i{
+  font-size: 25px;
 }
 
 .preview {
@@ -97,9 +100,14 @@
 }
 
 .preview h3 {
-  font-size: 15px;
-  color: rgb(16, 16, 20) !important;
-  margin-bottom: 6px;
+  font-size: 20px;
+  color: rgb(4, 2, 5) !important;
+  font-family:fantasy;
+  font-weight: 400;
+}
+.preview h3 h6{
+  font-size: 5px;
+  color: rgb(16, 16, 20)!important;
 }
 .preview a{
   text-decoration: none !important;
@@ -107,10 +115,19 @@
 .preview button {
   padding: 5px;
   border-radius: 10px;
-  background-color: #8052ec ;
+  background-color: #7c14ec ;
   color: white;
   position: relative;
   float: right;
+  width: 10%;
+  height: 35px;
+  cursor: pointer ;
+  border:  none;
+  outline: none;
+}
+.preview #check{
+  position: relative;
+  float: left;
   width: 10%;
   height: 35px;
   cursor: pointer ;

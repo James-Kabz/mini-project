@@ -1,3 +1,19 @@
 {
-  "todos": []
+  "todos": [
+    {
+      "id": "91a4",
+      "title": "Go to the Gym",
+      "date": "2/28/2024, 9:57:50 PM"
+    },
+    {
+      "id": "e8d9",
+      "title": "Bake a Cake",
+      "date": "2/28/2024, 9:58:10 PM"
+    },
+    {
+      "id": "bd94",
+      "title": "Buy Vegetables",
+      "date": "2/28/2024"
+    }
+  ]
 }

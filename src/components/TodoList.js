@@ -1,5 +1,5 @@
 
-import React from "react";
+
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import UseFetch from "./UseFetch";
@@ -7,7 +7,6 @@ import UseFetch from "./UseFetch";
 const TodoList = () => {
     const { data: todos } = UseFetch('http://localhost:5000/todos');
     const history = useHistory();
-
      const handleClick = (e, id) => {
         e.preventDefault();
         handleDelete(id);
@@ -30,18 +29,19 @@ const TodoList = () => {
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
-        return date.toLocaleTimeString(); // Format the date as per your requirement
+        return date.toLocaleString(); 
     };
 
     return (
         <div className='todoList'>
             {todos && todos.map((todo) => (
                 <div className="preview" key={todo.id}>
-                    <span className="created-at">Created at: {formatDate(todo.date)}</span>
+                
                     <h3>{todo.title} 
                         <button onClick={(e) => handleClick(e, todo.id)}> 
-                            <i className="fa fa-trash" aria-hidden="true"></i> 
+                         <i class="fa fa-check" aria-hidden="true"></i> 
                         </button>
+                        <h6 className="created-at">Created at  {formatDate(todo.date)}</h6>
                     </h3>
                 </div>
             ))}
